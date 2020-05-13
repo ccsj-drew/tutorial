@@ -70,9 +70,12 @@ class CustomersController extends Controller
  {
    $customer = Customer::find($id);
    //dd('hello');
-   //$customers->delete($id);
-   customer::find($id)->delete();
-/// issue is possible here////
-  // return redirect('/customers');
+   $customer = Customer::find($id);
+   customer::find($id)->delete($id);
+   
+
+
+   /// issue is possible here////
+   return redirect('/customers');
  }
 }
