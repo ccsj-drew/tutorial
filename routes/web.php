@@ -18,7 +18,6 @@ Route::get('/', function () {
 
 });
 Route::resource('customers', "CustomersController");
-
 //Route::get('customers/{id}', function ($id) {
       //return 'customers'.$id;
 //Route::get('customers/{id}', function ($id) {

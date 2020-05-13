@@ -32,7 +32,7 @@
       </form></td>
         <p>
           <td><a href="/reservations/create/{{ $customer->id }}">Make Reservation</a></td>
-
+          <td><a href="customers/{{$customer->id}}/show">show</a></td>
 
       @endforeach
 

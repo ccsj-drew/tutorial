@@ -39,11 +39,13 @@ class CustomersController extends Controller
 
 
 
-  public function show($id) {
-      //dd('hello world');
-        $customers = Customer::findOrFail($id);
-        return view ('customers.show',compact('customer'));
- }
+  public function show(Post $id)
+  {
+      //
+      $customer->find($id);
+
+      return view('posts.show', compact('post'));
+  }
 
 
 
@@ -72,7 +74,7 @@ class CustomersController extends Controller
    //dd('hello');
    $customer = Customer::find($id);
    customer::find($id)->delete($id);
-   
+
 
 
    /// issue is possible here////

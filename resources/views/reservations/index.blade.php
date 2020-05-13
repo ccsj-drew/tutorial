@@ -38,6 +38,7 @@
           @csrf
         <p><button type="submit">Delete room</button></p>
       </form></td>
+      <td><a href="reservations/{{$reservation->id}}/show">show</a></td>
 
 
 
