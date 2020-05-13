@@ -18,23 +18,20 @@
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
-    <th>Edit</th>
-    <th>Reserve</th>
-    <th>Delete</th>
+
   </tr>
     @foreach ($customers as $customer)
       <tr>
         <td>{{$customer->first_name}}</td>
         <td>{{$customer->last_name}}</td>
         <td><a href="/customers/{{$customer->id}}/edit">Update</a></td>
-        <td><a href="/reservations/create/{{ $customer->id }}">Make Reservation</a></td>
         <td><form method="POST" action="/customers/{{ $customer->id }}">
           @method('DELETE')
           @csrf
-        <p><button type="submit">Delete Customer</button></p>
+        <p><button type="submit">Delete</button></p>
       </form></td>
         <p>
-
+          <td><a href="/reservations/create/{{ $customer->id }}">Make Reservation</a></td>
 
 
       @endforeach

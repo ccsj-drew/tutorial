@@ -6,8 +6,7 @@
 </head>
 <body>
   <h1>Edit Reseravtion</h1>
-
-  <form method="POST" action="reservations/{reservation}/edit">
+  <form method="POST" action="/reservations/{{$reservation->id}}">
     @method('PATCH')
     @csrf
 

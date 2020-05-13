@@ -7,7 +7,8 @@ use Illuminate\Notifications\Notifiable;
 
 class Reservation extends Model
 {
-  
+
 public $timestamps = false;
+
 
 }

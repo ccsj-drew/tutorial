@@ -21,9 +21,9 @@
       <th>Start Date</th>
       <th>End Date</th>
       <th>Amount</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    
+
+
+
     </tr>
     @foreach ($reservations as $reservation)
       <tr>
@@ -32,8 +32,8 @@
         <td>{{$reservation->start_date}}</td>
         <td>{{$reservation->end_date}}</td>
         <td>{{$reservation->amount}}</td>
-        <td><a href="reservations/{reservation}/edit">Update</a></td>
-        <td><form method="POST" action="reservations/{reservation}">
+        <td><a href="reservations/{{$reservation->id}}/edit">Update</a></td>
+        <td><form method="POST" action="reservations/{{$reservation->id}}">
           @method('DELETE')
           @csrf
         <p><button type="submit">Delete room</button></p>
@@ -53,7 +53,7 @@
       @endforeach
     </tr>
     <p>
-    <a href=" reservations/{reservation}/edit">Edit Reservation</a>
+    <a href="/customers">All Customers</a>
 
   </p>
   <table>

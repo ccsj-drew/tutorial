@@ -58,7 +58,7 @@ public function store($customer_id)
        //dd('hello edit');
        $reservation = reservation::find($id);
        return view('reservations.edit', compact('reservation'));
-       //return redirect('/reservations');
+       return redirect('/reservations');
      }
 
      public function update($id)
@@ -68,10 +68,10 @@ public function store($customer_id)
        $reservation->start_date = request('start_date');
        $reservation->end_date = request('end_date');
        $reservation->amount = request('amount');
-       $reservation->customer_id = request('customer_id');
+       //$reservation->customer_id = request('customer_id');
       $reservation->save();
 
-       return redirect('/reservation');
+       return redirect('/reservations');
      }
 
 
@@ -79,7 +79,7 @@ public function store($customer_id)
     {
       //dd('hello delete');
       $reservation = reservation::find($customer_id);
-      $reservation ->delete($customer_id);
-      return redirect('/reservation');
+       reservation::find($customer_id)->delete();
+      return redirect('/reservations');
     }
 }

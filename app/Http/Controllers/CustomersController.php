@@ -73,6 +73,6 @@ class CustomersController extends Controller
    //$customers->delete($id);
    customer::find($id)->delete();
 /// issue is possible here////
-   return redirect('/customers');
+  // return redirect('/customers');
  }
 }
